@@ -51,9 +51,9 @@ zainstalowaæ ten pakiet
 %build
 rm -f missing
 %{__libtoolize}
-aclocal -I macros
+%{__aclocal} -I macros
 %{__autoconf}
-autoheader
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
