@@ -5,10 +5,6 @@ Version:	0.15
 Release:	13
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(es):	X11/Administraadores De Ventanas
-Group(fr):	X11/Gestionnaires De Fenêtres
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	ftp://www.rasterman.com/pub/enlightenment/%{name}-%{version}.tar.gz
 Patch0:		%{name}-keybind.patch
 Patch1:		%{name}-spelling.patch
