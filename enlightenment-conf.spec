@@ -1,4 +1,4 @@
-Summary:	E-conf the Enlightenment configuration tool. 
+Summary:	E-conf the Enlightenment configuration tool.
 Summary(pl):	Narzêdzie do konfiguracji Enlightenmenta
 Name:		enlightenment-conf
 Version:	0.15
@@ -22,7 +22,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-  
+
 %define		_prefix		/usr/X11R6
 
 %description
@@ -38,7 +38,7 @@ ró¿nych sposobów, wiêc jesli chcesz go u¿ywaæ, to powiniene¶
 zainstalowaæ ten pakiet
 
 %prep
-%setup -q 
+%setup -q
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -53,7 +53,7 @@ aclocal -I macros
 #autoconf
 autoheader
 #automake -a -c
-%configure2_13 
+%configure2_13
 %{__make}
 
 %install
