@@ -1,4 +1,4 @@
-Summary:	E-conf the Enlightenment configuration tool.
+Summary:	E-conf the Enlightenment configuration tool
 Summary(pl):	Narzêdzie do konfiguracji Enlightenmenta
 Name:		enlightenment-conf
 Version:	0.15
