@@ -2,7 +2,7 @@ Summary:	E-conf the Enlightenment configuration tool.
 Summary(pl):	Narzêdzie do konfiguracji Enlightenmenta
 Name:		enlightenment-conf
 Version:	0.15
-Release:	13
+Release:	14
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	ftp://www.rasterman.com/pub/enlightenment/%{name}-%{version}.tar.gz
@@ -14,13 +14,13 @@ Patch4:		%{name}-DESTDIR.patch
 Patch5:		%{name}-use_AM_GNU_GETTEXT.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
-BuildRequires:	flex
-BuildRequires:	gtk+-devel
 BuildRequires:	control-center-devel
+BuildRequires:	flex
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
+BuildRequires:	gtk+-devel
 BuildRequires:	imlib-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -48,11 +48,11 @@ zainstalowaæ ten pakiet
 
 %build
 rm -f missing
-libtoolize -c -f
+%{__libtoolize}
 aclocal -I macros
-#autoconf
+#%{__autoconf}
 autoheader
-#automake -a -c
+#%{__automake}
 %configure2_13
 %{__make}
 
@@ -61,8 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf AUTHORS README
-
 %find_lang %{name}
 
 %clean
@@ -70,8 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
-%dir %{_datadir}/control-center
+%doc AUTHORS README
 %dir %{_datadir}/control-center/Workspace
 %attr(755,root,root) %{_bindir}/e-conf
 %{_datadir}/control-center/Workspace/Enlightenment.desktop
