@@ -1,0 +1,11 @@
+--- enlightenment-conf-0.15/configure.in~	Thu Mar 11 21:20:13 1999
++++ enlightenment-conf-0.15/configure.in	Wed May 30 10:44:58 2001
+@@ -20,7 +20,7 @@
+ dnl utility conditional
+ AM_CONDITIONAL(FALSE, test "x" = "y")
+ ALL_LINGUAS="cs da de es fi fr ga hu it ja ko no pl pt ru sv"
+-AM_GNOME_GETTEXT
++AM_GNU_GETTEXT
+ 
+ CAPPLET_INCLUDES=`gnome-config --cflags capplet`
+ CAPPLET_LIBS=`gnome-config --libs capplet`
