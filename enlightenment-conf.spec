@@ -28,33 +28,18 @@ rm -rf $RPM_BUILD_ROOT
 
 make DESTDIR=$RPM_BUILD_ROOT install
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README
 %attr(755,root,root) /usr/X11R6/bin/*
-
-%lang(cs) /usr/X11R6/share/locale/cs/LC_MESSAGES/
-%lang(da) /usr/X11R6/share/locale/da/LC_MESSAGES/
-%lang(de) /usr/X11R6/share/locale/de/LC_MESSAGES/
-%lang(es) /usr/X11R6/share/locale/es/LC_MESSAGES/
-%lang(fi) /usr/X11R6/share/locale/fi/LC_MESSAGES/
-%lang(fr) /usr/X11R6/share/locale/fr/LC_MESSAGES/
-%lang(ga) /usr/X11R6/share/locale/ga/LC_MESSAGES/
-%lang(hu) /usr/X11R6/share/locale/hu/LC_MESSAGES/
-%lang(it) /usr/X11R6/share/locale/it/LC_MESSAGES/
-%lang(ja) /usr/X11R6/share/locale/ja/LC_MESSAGES/
-%lang(ko) /usr/X11R6/share/locale/ko/LC_MESSAGES/
-%lang(no) /usr/X11R6/share/locale/no/LC_MESSAGES/
-%lang(pl) /usr/X11R6/share/locale/pl/LC_MESSAGES/
-%lang(pt) /usr/X11R6/share/locale/pt/LC_MESSAGES/
-%lang(ru) /usr/X11R6/share/locale/ru/LC_MESSAGES/
-%lang(sv) /usr/X11R6/share/locale/sv/LC_MESSAGES/
 
 %changelog
 * Fri Mar 19 1999 Michael Fulbright <drmike@redhat.com>
