@@ -1,6 +1,6 @@
 Name:		enlightenment-conf
 Version:	0.15
-Release:	11
+Release:	12
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
@@ -18,7 +18,6 @@ BuildRequires:	control-center-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	imlib-devel
-BuildRequires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
   
 %define		_prefix		/usr/X11R6
