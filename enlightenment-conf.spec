@@ -40,15 +40,15 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf ABOUT-NLS AUTHORS INSTALL README
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %dir %{_datadir}/control-center
 %dir %{_datadir}/control-center/Workspace
 %attr(755,root,root) %{_bindir}/e-conf
 %doc {ABOUT-NLS,AUTHORS,INSTALL,README}.gz
 %{_datadir}/control-center/Workspace/Enlightenment.desktop
-%{_datadir}/locale/*/*/*
