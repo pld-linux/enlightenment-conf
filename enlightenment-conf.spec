@@ -16,7 +16,7 @@ Patch5:		%{name}-use_AM_GNU_GETTEXT.patch
 Patch6:		%{name}-configure.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	control-center-devel
+BuildRequires:	control-center1-devel
 BuildRequires:	flex
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
@@ -44,7 +44,6 @@ okien enlightenment.
 %patch6 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal} -I macros
 %{__autoconf}
