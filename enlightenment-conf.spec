@@ -40,13 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README
 %attr(755,root,root) /usr/X11R6/bin/*
-
-%changelog
-* Fri Mar 19 1999 Michael Fulbright <drmike@redhat.com>
-- strip binaries
-
-* Tue Feb 23 1999 The Rasterman <raster@redhat.com>
-- Updated to 0.14
-
-* Wed Feb 3 1999 The Rasterman <raster@redhat.com>
-- Created for new E-conf standalone module
