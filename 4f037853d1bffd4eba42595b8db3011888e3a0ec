@@ -1,0 +1,12 @@
+
+- added using CVS keywords in %changelog (for automating them).
+
+
+* Fri Mar 19 1999 Michael Fulbright <drmike@redhat.com>
+- strip binaries
+
+* Tue Feb 23 1999 The Rasterman <raster@redhat.com>
+- Updated to 0.14
+
+* Wed Feb 3 1999 The Rasterman <raster@redhat.com>
+- Created for new E-conf standalone module
