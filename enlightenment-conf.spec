@@ -12,6 +12,7 @@ Patch2:		%{name}-locale.patch
 Patch3:		%{name}-alpha-notrans.patch
 Patch4:		%{name}-DESTDIR.patch
 Patch5:		%{name}-use_AM_GNU_GETTEXT.patch
+Patch6:		%{name}-configure.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	control-center-devel
@@ -45,15 +46,16 @@ zainstalowaæ ten pakiet
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
+%patch6 -p1
 
 %build
 rm -f missing
 %{__libtoolize}
 aclocal -I macros
-#%{__autoconf}
+%{__autoconf}
 autoheader
-#%{__automake}
-%configure2_13
+%{__automake}
+%configure
 %{__make}
 
 %install
