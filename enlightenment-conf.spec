@@ -1,23 +1,27 @@
+Summary:	E-conf the Enlightenment configuration tool. 
 Name:		enlightenment-conf
 Version:	0.15
-Release:	12
+Release:	13
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(es):	X11/Administraadores De Ventanas
 Group(fr):	X11/Gestionnaires De Fenêtres
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Summary:	E-conf the Enlightenment configuration tool. 
 Source0:	ftp://www.rasterman.com/pub/enlightenment/%{name}-%{version}.tar.gz
 Patch0:		%{name}-keybind.patch
 Patch1:		%{name}-spelling.patch
 Patch2:		%{name}-locale.patch
 Patch3:		%{name}-alpha-notrans.patch
 Patch4:		%{name}-DESTDIR.patch
+Patch5:		%{name}-use_AM_GNU_GETTEXT.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	control-center-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	imlib-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
   
 %define		_prefix		/usr/X11R6
@@ -35,9 +39,15 @@ configuration tool if you plan to use Enlightenment.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 
 %build
+libtoolize --copy --force
 gettextize --copy --force
+aclocal -I macros
+autoconf
+rm -f missing
+automake -a -c
 %configure 
 %{__make}
 
