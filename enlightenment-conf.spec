@@ -20,7 +20,7 @@ A Configuration tool for easily setting up Enlightenment
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure %{_target} \
+./configure %{_target_platform} \
 	--prefix=/usr/X11R6
 
 %install
