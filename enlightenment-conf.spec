@@ -6,6 +6,7 @@ Release:	14
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	ftp://www.rasterman.com/pub/enlightenment/%{name}-%{version}.tar.gz
+# Source0-md5:	ad87526c1e86088e5ba851c36eb70b13
 Patch0:		%{name}-keybind.patch
 Patch1:		%{name}-spelling.patch
 Patch2:		%{name}-locale.patch
