@@ -1,6 +1,6 @@
 Name:		enlightenment-conf
 Version:	0.15
-Release:	10
+Release:	11
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
