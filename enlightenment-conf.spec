@@ -54,9 +54,9 @@ zainstalowaæ ten pakiet
 rm -f missing
 libtoolize -c -f
 aclocal -I macros
-automake -a -c
-autoconf
+#autoconf
 autoheader
+#automake -a -c
 %configure2_13 
 %{__make}
 
