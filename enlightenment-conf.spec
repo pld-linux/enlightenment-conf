@@ -52,6 +52,11 @@ zainstalowaæ ten pakiet
 
 %build
 rm -f missing
+libtoolize -c -f
+aclocal -I macros
+automake -a -c
+autoconf
+autoheader
 %configure2_13 
 %{__make}
 
