@@ -33,7 +33,7 @@ configuration tool if you plan to use Enlightenment.
 
 %build
 %configure 
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
