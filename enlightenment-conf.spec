@@ -4,7 +4,7 @@ Version:	0.15
 Release:	4
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
-Group(pl):	X11/Zarz±dcy okien/Narzêdzia
+Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source:		ftp://www.rasterman.com/pub/enlightenment/%{name}-%{version}.tar.bz2
 Patch:		enlightenment-conf-keybind.patch
 URL:		http://www.rasterman.com/
