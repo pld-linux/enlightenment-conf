@@ -18,11 +18,13 @@ Patch4:		%{name}-DESTDIR.patch
 Patch5:		%{name}-use_AM_GNU_GETTEXT.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
+BuildRequires:	flex
+BuildRequires:	gtk+-devel
 BuildRequires:	control-center-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	imlib-devel
-BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
   
 %define		_prefix		/usr/X11R6
@@ -49,13 +51,8 @@ zainstalowaæ ten pakiet
 %patch5 -p1
 
 %build
-libtoolize --copy --force
-gettextize --copy --force
-aclocal -I macros
-autoconf
 rm -f missing
-automake -a -c
-%configure 
+%configure2_13 
 %{__make}
 
 %install
