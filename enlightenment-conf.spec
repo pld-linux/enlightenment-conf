@@ -5,9 +5,9 @@ Release:	4
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source:		ftp://www.rasterman.com/pub/enlightenment/%{name}-%{version}.tar.bz2
+Source:		ftp://www.enlightenment.org/pub/enlightenment/enlightenment/tools/%{name}-%{version}.tar.bz2
 Patch:		enlightenment-conf-keybind.patch
-URL:		http://www.rasterman.com/
+URL:		http://www.enlightenment.org/
 Requires:	control-center
 BuildRoot:	/tmp/%{name}-%{version}-root
 
