@@ -1,0 +1,23 @@
+--- enlightenment-conf-0.15/e-conf.c.original	Sun Jul 25 22:24:39 1999
++++ enlightenment-conf-0.15/e-conf.c	Sun Jul 25 22:25:11 1999
+@@ -5017,16 +5017,16 @@
+ 
+   if (is_capp)
+     {
+-      bindtextdomain("E-conf", GNOMELOCALEDIR);
+-      textdomain("E-conf");
++      bindtextdomain("enlightenment-conf", GNOMELOCALEDIR);
++      textdomain("enlightenment-conf");
+       gnome_capplet_init("E-conf", "0.15", argc,
+ 			 argv, NULL, 0, NULL);
+       capplet = capplet_widget_new();
+     }
+   else
+     {
+-      bindtextdomain("E-conf", GNOMELOCALEDIR);
+-      textdomain("E-conf");
++      bindtextdomain("enlightenment-conf", GNOMELOCALEDIR);
++      textdomain("enlightenment-conf");
+       gnome_init("E-conf", "0.15", argc, argv);
+       capplet = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+       gtk_window_set_title(GTK_WINDOW(capplet), 

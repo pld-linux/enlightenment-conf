@@ -1,0 +1,41 @@
+diff -Nru enlightenment-conf-0.15.orig/Makefile.am enlightenment-conf-0.15/Makefile.am
+--- enlightenment-conf-0.15.orig/Makefile.am	Wed Jun  7 00:46:02 2000
++++ enlightenment-conf-0.15/Makefile.am	Wed Jun  7 00:47:02 2000
+@@ -54,7 +54,7 @@
+         Enlightenment.desktop
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(sysdir)
++	$(mkinstalldirs) $(DESTDIR)$(sysdir)
+ 
+ ## to automatically rebuild aclocal.m4 if any of the macros in macros/' change
+ #@MAINT@include macros/macros.dep
+diff -Nru enlightenment-conf-0.15.orig/Makefile.in enlightenment-conf-0.15/Makefile.in
+--- enlightenment-conf-0.15.orig/Makefile.in	Wed Jun  7 00:46:02 2000
++++ enlightenment-conf-0.15/Makefile.in	Wed Jun  7 00:46:33 2000
+@@ -555,7 +555,7 @@
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(sysdir)
++	$(mkinstalldirs) $(DESTDIR)$(sysdir)
+ 
+ #@MAINT@include macros/macros.dep
+ #@MAINT@macros/macros.dep: macros/Makefile.am
+diff -Nru enlightenment-conf-0.15.orig/po/Makefile.in.in enlightenment-conf-0.15/po/Makefile.in.in
+--- enlightenment-conf-0.15.orig/po/Makefile.in.in	Wed Jun  7 00:46:03 2000
++++ enlightenment-conf-0.15/po/Makefile.in.in	Wed Jun  7 00:47:00 2000
+@@ -18,10 +18,10 @@
+ 
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+-datadir = $(prefix)/@DATADIRNAME@
++datadir = $(DESTDIR)$(prefix)/@DATADIRNAME@
+ localedir = $(datadir)/locale
+-gnulocaledir = $(prefix)/share/locale
+-gettextsrcdir = $(prefix)/share/gettext/po
++gnulocaledir = $(DESTDIR)$(prefix)/share/locale
++gettextsrcdir = $(DESTDIR)$(prefix)/share/gettext/po
+ subdir = po
+ 
+ INSTALL = @INSTALL@

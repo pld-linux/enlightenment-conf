@@ -1,0 +1,20 @@
+--- enlightenment-conf-0.15/e-conf.c.spelling	Tue May 25 16:53:09 1999
++++ enlightenment-conf-0.15/e-conf.c	Tue May 25 16:53:37 1999
+@@ -1838,7 +1838,7 @@
+   *value = adj->value;
+   label = (GtkWidget *) gtk_object_get_data(GTK_OBJECT(w), "label");
+   g_snprintf(str, sizeof(str),
+-	     _("The virutal desktop size will be\n"
++	     _("The virtual desktop size will be\n"
+ 	       "%1.0f x %1.0f\n"
+ 	       "screens in size"),
+ 	     e_opt_area_width, e_opt_area_height);
+@@ -1891,7 +1891,7 @@
+   gtk_signal_connect(GTK_OBJECT(adj), "value_changed",
+ 		     GTK_SIGNAL_FUNC(e_cb_area_range), (gpointer) area);
+   g_snprintf(str, sizeof(str),
+-	     _("The virutal desktop size will be\n"
++	     _("The virtual desktop size will be\n"
+ 	       "%1.0f x %1.0f\n"
+ 	       "screens in size"),
+ 	     e_opt_area_width, e_opt_area_height);

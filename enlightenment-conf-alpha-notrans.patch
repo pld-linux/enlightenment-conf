@@ -1,0 +1,15 @@
+--- enlightenment-conf-0.15/e-conf.c.sopwith	Wed Sep  1 15:59:01 1999
++++ enlightenment-conf-0.15/e-conf.c	Wed Sep  1 15:59:44 1999
+@@ -1997,8 +1997,12 @@
+ 	  N_("Windows are moved by drawing a stippled outline of them")},
+ 	{N_("Semi-Solid"), move_semi_solid_xpm,
+ 	  N_("Windows are moved by drawing a chequered outline of them")},
++#ifndef __alpha__
++/* Translucent moves require shared pixmaps, and we've disabled them
++   on the Alpha because they are broken */
+ 	{N_("Translucent"), move_translucent_xpm,
+ 	  N_("Windows are moved by drawing a translucent copy of the window")}
++#endif
+     };
+   IconOption          resize_options[] =
+     {
