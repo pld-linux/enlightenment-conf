@@ -1,0 +1,12 @@
+diff -uNr enlightenment-conf-0.15.orig/configure.in enlightenment-conf-0.15/configure.in
+--- enlightenment-conf-0.15.orig/configure.in	Sat Aug 10 01:44:30 2002
++++ enlightenment-conf-0.15/configure.in	Sat Aug 10 01:46:06 2002
+@@ -18,7 +18,7 @@
+ GNOME_COMPILE_WARNINGS
+ GNOME_X_CHECKS
+ dnl utility conditional
+-AM_CONDITIONAL(FALSE, test "x" = "y")
++AM_CONDITIONAL(false, test "x" = "y")
+ ALL_LINGUAS="cs da de es fi fr ga hu it ja ko no pl pt ru sv"
+ AM_GNU_GETTEXT
+ 
