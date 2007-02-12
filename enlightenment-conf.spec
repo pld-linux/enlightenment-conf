@@ -1,5 +1,5 @@
 Summary:	E-conf the Enlightenment configuration tool
-Summary(pl):	Narzêdzie do konfiguracji Enlightenmenta
+Summary(pl.UTF-8):   NarzÄ™dzie do konfiguracji Enlightenmenta
 Name:		enlightenment-conf
 Version:	0.15
 Release:	14
@@ -29,8 +29,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The enlightenment-conf package contains a configuration tool for
 configuring the Enlightenment window manager.
 
-%description -l pl
-Pakiet enlightenment-conf zawiera narzêdzie do konfiguracji zarz±dcy
+%description -l pl.UTF-8
+Pakiet enlightenment-conf zawiera narzÄ™dzie do konfiguracji zarzÄ…dcy
 okien enlightenment.
 
 %prep
