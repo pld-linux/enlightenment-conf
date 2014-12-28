@@ -18,7 +18,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	control-center1-devel
 BuildRequires:	flex
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	imlib-devel
